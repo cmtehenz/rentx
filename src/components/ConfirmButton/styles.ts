@@ -1,19 +1,15 @@
-import { RectButton, RectButtonProps } from 'react-native-gesture-handler';
+import { RectButton } from 'react-native-gesture-handler';
 import { RFValue } from 'react-native-responsive-fontsize';
 import styled from 'styled-components/native';
 
-interface ButtonProps extends RectButtonProps {
-  color: string;
-}
+export const Container = styled(RectButton)`
+  width: 80px;
+  height: 56px;
 
-export const Container = styled(RectButton)<ButtonProps>`
-  width: 100%;
+  background-color: ${({ theme }) => theme.colors.shape_dark};
 
-  padding: 19px;
   align-items: center;
   justify-content: center;
-
-  background-color: ${({ color }) => color };
 `;
 
 export const Title = styled.Text`

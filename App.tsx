@@ -12,11 +12,9 @@ import {
 } from '@expo-google-fonts/inter';
 
 import { ThemeProvider } from 'styled-components';
-
-import { CarDetails } from './src/screens/CarDetails';
-
 import theme from './src/styles/theme';
-import { Scheduling } from './src/screens/Scheduling';
+
+import { Routes } from './src/routes';
 
 
 export default function App() {
@@ -34,7 +32,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Scheduling />
+      <Routes />
     </ThemeProvider>
     
   );
